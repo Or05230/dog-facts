@@ -5,7 +5,7 @@ const postsRouting = require('./routes/posts')
 const app = express();
 
 
-mongoose.connect("mongodb+srv://orahl:52465246@cluster0.cmo5o.mongodb.net/first?retryWrites=true&w=majority", {useNewUrlParser: true})
+mongoose.connect("mongodb+srv://orahl:y3I0Yae9fonRCW5m@cluster0.cmo5o.mongodb.net/first?retryWrites=true&w=majority", {useNewUrlParser: true})
 .then (() => {
   console.log('coonected to DB!')
 })
