@@ -1,0 +1,30 @@
+
+
+<mat-card class="table-card">
+  <mat-card-title class="table-title">
+    <div class="form-title-text">
+      <span>Facts Table</span>
+      <div class="pull-right-btn">
+        <button
+                (click)="onAddNewFact()"
+                mat-raised-button
+                color="primary"
+        >
+          Add New Fact
+        </button>
+      </div>
+    </div>
+  </mat-card-title>
+
+  <hr class="form-hr app-hr" />
+
+  <mat-card-content>
+    <div class="main-container">
+      <mat-tab-group (selectedTabChange)="tabChanged($event)" [selectedIndex]="selectedIndex" color="primary">
+        <mat-tab label="All Facts"></mat-tab>
+        <mat-tab label="My Facts"></mat-tab>
+      </mat-tab-group>
+      <app-facts-table [selectedIndex]="selectedIndex"></app-facts-table>
+    </div>
+  </mat-card-content>
+</mat-card>

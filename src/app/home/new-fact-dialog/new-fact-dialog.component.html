@@ -1,0 +1,45 @@
+
+<div>
+  <span mat-dialog-title class="dialog-title">Create a new fact </span>
+
+  <hr class="form-hr" />
+
+  <form class="app-dialog-content" [formGroup]="form">
+
+    <div class="content">
+      <mat-form-field appearance="outline" class="col-6">
+        <mat-label>Name</mat-label>
+        <input
+                formControlName="addedBy"
+                matInput
+        />
+      </mat-form-field>
+    </div>
+
+    <div class="content">
+      <label class="content-label">Fact </label><br />
+      <mat-form-field appearance="outline" class="app-text-input">
+        <textarea
+          class="no-overflow"
+          matInput
+          cdkTextareaAutosize
+          cdkAutosizeMinRows="4"
+          cdkAutosizeMaxRows="4"
+          placeholder="Type your fact here"
+          formControlName="fact"
+        ></textarea>
+        <mat-hint>Characters left: {{ 600 - form?.get('fact')?.value?.length }}</mat-hint>
+      </mat-form-field>
+    </div>
+
+  </form>
+
+  <hr class="form-hr" />
+
+  <mat-dialog-actions align="end">
+    <div class="btn-container">
+      <button (click)="onCancel()" [mat-dialog-close] class="no-outline-btn" mat-stroked-button>Cancel</button>
+      <button (click)="submitFact()" class="no-outline-btn" color="primary" mat-flat-button [disabled]="!this.form.valid">Add</button>
+    </div>
+  </mat-dialog-actions>
+</div>

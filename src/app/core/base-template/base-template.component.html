@@ -1,0 +1,16 @@
+<div class="app-container">
+  <mat-toolbar>
+    <div>
+      <label class="logo" (click)="this.navigateToHome()"> Dog Facts App</label>
+    </div>
+
+  </mat-toolbar>
+
+  <div class="main-app-container">
+  <router-outlet></router-outlet>
+  </div>
+
+  <div class="copyright">
+    <label class="copyright-text light-txt"> {{ copyright }}</label>
+  </div>
+</div>

@@ -1,0 +1,196 @@
+@import '../../libs/themes/form';
+@import '../../libs/themes/common-theme';
+@import '../../libs/themes/global-styles';
+
+@include facts-app-form;
+
+:host {
+  overflow: hidden !important;
+}
+
+.div {
+  width: 100%;
+  padding: 0px 30px;
+  .Rectangle {
+    display: inline-block;
+    text-align: left;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    display: inline-block;
+    background-color: #da3025;
+
+    .error-message {
+      display: flex;
+      font-family: Roboto;
+      font-size: 14px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      color: #ffffff;
+      width: 100%;
+    }
+  }
+}
+
+.dialog-hr {
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
+.mat-dialog-title {
+  display: block;
+  margin-top: -4px;
+  margin-bottom: 6px;
+}
+
+.mat-dialog-content {
+  //white-space: pre;
+  white-space: pre-line;
+  min-height: 100px;
+  padding: 24px !important;
+}
+
+.form-hr {
+  margin-left: -24px;
+  margin-right: -24px;
+}
+
+.dialog-content {
+  padding-top: 25px;
+  min-height: 100px !important;
+}
+
+.icon-cancel-btn {
+  float: right;
+  margin-top: -10px;
+  margin-right: -16px;
+}
+
+.btn-container {
+  margin: 0 auto;
+}
+
+.key-id-container {
+  background-color: map-get($app-background, key-container);
+  border-bottom: solid 1px map-get($app-foreground, border);
+  height: 50px;
+
+  .key-id {
+    font-weight: 500;
+    margin-left: 10px;
+    line-height: 50px;
+  }
+
+  .key-id-btn {
+    float: right;
+    margin-top: 4px;
+    right: 5px;
+  }
+}
+
+.suggest-form-container {
+  width: 680px;
+  margin: 0 auto;
+  height: fit-content;
+}
+
+.btn-container {
+  width: 160px;
+  margin: 0 auto;
+}
+
+.icon-cancel-btn {
+  float: right;
+}
+
+.exit-btn {
+  float: right;
+  position: absolute;
+  right: 50px;
+  font-size: 50px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+.sub-title {
+  font-size: smaller;
+}
+
+.form-radio-btn {
+  margin-left: 15px;
+  margin-top: 10px;
+}
+
+//.app-dialog-content{
+form {
+  border: solid 1px map-get($app-foreground, border);
+  border-radius: 4px;
+  padding: 20px;
+  padding-top: 35px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+
+  .bold {
+    font-weight: 500;
+  }
+
+}
+
+.content {
+  text-align: left;
+  width: 100%;
+  padding: 0 20px;
+  margin-bottom: 20px;
+
+  .content-label {
+    margin-left: 10px;
+  }
+
+  .mat-form-field {
+    width: 100%;
+  }
+}
+
+//}
+.no-overflow {
+  width: 100%;
+}
+
+.slider-row {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 20px;
+
+  .mat-slider {
+    margin-top: -10px;
+    width: 280px;
+
+    ::ng-deep.mat-slider-thumb-label-text {
+      font-size: 10px;
+      text-align: center;
+    }
+  }
+}
+
+.upload-container {
+  width: 100%;
+  padding: 0 35px;
+}
+
+.innerContainer {
+  display: grid;
+  place-items: center;
+  border-radius: 4px;
+  border: dashed 2px map-get($app-foreground, border);
+  padding: 15px;
+  cursor: pointer;
+
+}
